@@ -9,6 +9,6 @@
 #Neste video mostro a interface para Desktops e mobile. Totalmente Responsivo.</br>
 #In this video I show the interface for Desktops and mobile. Fully Responsive.</br>
 
-https://github.com/user-attachments/assets/ee21fbdd-45b9-483d-947d-74ae8d966d1f
+https://github.com/user-attachments/assets/ee21fbdd-45b9-483d-947d-74ae8d966d1f</br>
 
 
