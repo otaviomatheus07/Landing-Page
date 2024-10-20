@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PMQJ948C');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Descubra como transformar seu corpo de forma natural e saudável com nosso programa de emagrecimento. Resultados visíveis em 30 dias!">
+    <meta name="keywords" content="emagrecimento, perda de peso, saudável, transformação corporal, dieta natural">
+    <meta property="og:title" content="Transforme Seu Corpo Agora">
+    <meta property="og:description" content="Transforme seu corpo de forma saudável e natural com nosso método comprovado.">
+    <meta property="og:image" content="img/fundo16.jpg">
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="img/fundo16.jpg" as="image">
+    <title>Transforme Seu Corpo Agora - Emagrecimento Saudável</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PMQJ948C"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <img class="imgfundo" id="main-image" src="img/fundo16.jpg" alt="Imagem Principal" loading="lazy" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;">
+    
+    <!-- Container de carregamento -->
+    <div id="loading-container">
+        <div id="progress-bar">
+            <div id="progress-bar-fill"></div>
+            <div id="progress-text">0%</div>
+        </div>
+        <div id="carousel-container"></div> <!-- Carrossel -->
+        <div id="countdown">A oferta termina em: <span id="time">30</span> segundos</div>
+    </div>
+    
+    <!-- Conteúdo da landing page -->
+    <div id="content" class="container shadow">
+        <h1 class="hidden">Transforme Seu Corpo Naturalmente</h1>
+        <p class="hidden">Descubra o método natural e comprovado para perder peso sem dietas extremas e sem passar fome. Nosso programa foi desenvolvido para pessoas como você, que querem transformar seus corpos de maneira saudável e duradoura.</p>
+        <p class="hidden">Imagine ver resultados visíveis em apenas 30 dias, sem precisar abrir mão dos alimentos que você ama. Com nosso guia passo a passo, você terá tudo que precisa para perder peso de forma segura e eficaz.</p>
+
+        <!-- Botão de CTA -->
+        <div class="cta">
+            <button class="opaco">Quero Acessar o Guia Agora</button>
+        </div>
+
+        <!-- Imagens com efeito de rolagem -->
+        <div class="logos">
+            <div class="hidden">
+                <img class="avatar" src="img/fundo2.jpg" alt="Imagem 2">
+            </div>
+            <div class="hidden">
+                <img class="avatar" src="img/fundo3.jpg" alt="Imagem 3">
+            </div>
+            <div class="hidden">
+                <img class="avatar" src="img/fundo4.jpg" alt="Imagem 4">
+            </div>
+            <div class="hidden">
+                <img class="avatar" src="img/fundo5.jpg" alt="Imagem 5">
+            </div>
+        </div>
+
+        <!-- Benefícios -->
+        <div class="benefits">
+            <div class="benefit-item">Perda de peso rápida e saudável</div>
+            <div class="benefit-item">Sem precisar passar fome</div>
+            <div class="benefit-item">Método 100% natural</div>
+            <div class="benefit-item">Resultados visíveis em 30 dias</div>
+            <div class="benefit-item">Apoio de especialistas e nutricionistas</div>
+        </div>
+
+        <!-- Outro botão de CTA -->
+        <div class="cta">
+            <button class="opaco">Comece Sua Transformação Hoje</button>
+        </div>
+
+        <!-- Mais imagens com efeito -->
+        <div class="logos">
+            <div class="hidden">
+                <img class="avatar" src="img/fundo2.jpg" alt="Imagem 2">
+            </div>
+            <div class="hidden">
+                <img class="avatar" src="img/fundo3.jpg" alt="Imagem 3">
+            </div>
+            <div class="hidden">
+                <img class="avatar" src="img/fundo4.jpg" alt="Imagem 4">
+            </div>
+            <div class="hidden">
+                <img class="avatar" src="img/fundo5.jpg" alt="Imagem 5">
+            </div>
+        </div>
+
+        <!-- Formulário de cadastro -->
+        <h2 class="hidden">Cadastre-se para Receber Mais Informações</h2>
+        <p class="hidden">Preencha o formulário e comece a transformação agora mesmo!</p>
+
+        <form class="form hidden" id="signup-form" action="/submit" method="POST">  
+            <label for="name">Nome Completo:</label>
+            <input type="text" id="name" name="name" placeholder="Digite seu nome completo" required>
+            <div id="name-error" class="error-message" style="color: red;"></div>
+
+
+            <label for="phone">Telefone:</label>
+            <input type="tel" id="phone" required pattern="\d{10,15}" placeholder="Número de Telefone" required>
+            <div id="phone-error" class="error-message" style="color: red;"></div>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+            <div id="email-error" class="error-message" style="color: red;"></div>
+            
+
+            <input class="opaco" type="submit" value="Quero Receber Agora">
+        </form>
+        <div id="message" style="display: none;"></div>
+
+
+        <footer class="hidden">
+            <p>&copy; 2024 Transforme Seu Corpo - Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <!-- Script JS -->
+    <script src="script.js"></script>
+
+</body>
+</html>

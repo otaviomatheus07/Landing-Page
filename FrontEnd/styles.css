@@ -1,0 +1,396 @@
+/* Estilos gerais */
+        body {
+            font-family: fantasy;
+            background-image: url('img/fundo16.jpg'); /* Usar imagem de fundo */
+            background-size: cover; /* Cobrir toda a tela */
+            background-position: center; /* Centralizar a imagem */
+            color: #ecf0f1;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            height: 100vh; /* Garantir que o body cubra toda a altura da tela */
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        
+
+        .hidden{
+            opacity: 0;
+            filter: blur(15px);
+            transform: translateX(-100%);
+            transition: all 1s;
+        }
+
+        .show{
+            opacity: 1;
+            filter: blur(0);
+            transform: translateX(0);
+            transition: all 1s;
+        }
+
+        /* Efeitos de sombra */
+        .shadow {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+        }
+
+        /* Container de carregamento */
+        #loading-container {
+            position: fixed; /* Mudar para fixed */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(52, 73, 94, 0.416); /* Fundo semi-transparente para ver a imagem de fundo */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 999; /* Certifique-se de que está no topo */
+        }
+
+        /* Barra de progresso */
+        #progress-bar {
+            width: 80%;
+            height: 50px;
+            background-color: #ecf0f1;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        #carousel-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            height: auto;
+            z-index: 1000; /* Certifique-se de que está acima de outros elementos */
+            position: relative;
+        }
+        #carousel-container img {
+            width: 300px; /* Ajuste o tamanho da imagem */
+            height: 200px; /* Ajuste o tamanho da imagem */
+            border-radius: 8px; /* Bordas arredondadas */
+        }
+        
+        
+
+        #progress-bar-fill {
+            height: 100%;
+            width: 0;
+            background-color: #1abc9c;
+            transition: width 0.2s;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        /* Texto da porcentagem */
+        #progress-text {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #34495e;
+            font-weight: bold;
+        }
+
+        /* Imagem do personagem */
+        #character {
+            width: 80px; /* Largura ajustada */
+            height: auto;
+            position: absolute;
+            top: 50%; /* Centraliza verticalmente */
+            transform: translateY(-50%); /* Ajuste fino para centralização */
+            transition: left 0.2s; /* Transição suave da posição horizontal */
+        }
+
+        /* Conteúdo da página (inicialmente oculto) */
+        #content {
+            display: none; /* Inicialmente oculto */
+            background-image: url('img/fundo15.jpg');
+            position: relative; /* Para garantir que fica acima do fundo */
+            z-index: 10; /* Aumentar z-index para ficar acima do background */
+            padding: 20px;
+            background-color: rgba(52, 73, 94, 0.9); /* Fundo semi-transparente para o conteúdo */
+            border-radius: 10px;
+        }
+
+        /* Estilos da landing page original */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(52, 73, 94, 0.9); /* Cinza escuro com transparência */
+            border-radius: 10px;
+        }
+        
+        h1, h2 {
+            border: 2px solid #fff; /* Borda para visibilidade */
+            background-color: rgba(0, 0, 0, 0.144); /* Fundo preto com 70% de opacidade */
+            padding: 20px; /* Espaçamento interno */
+            animation: fadeIn 1s ease forwards;
+            opacity: 0; /* Inicialmente invisível */
+            border-radius: 10px;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1; /* Torna visível */
+            }
+        }
+
+        h1 {
+            color: #ff00ee; /* Verde suave */
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #ecf0f1;
+            text-align: center;
+            font-size: 28px;
+            margin-top: 40px;
+        }
+
+        p {
+            background-color: rgba(0, 0, 0, 0.288); /* Fundo preto com 70% de opacidade */
+            border: 2px solid #fff; /* Borda para visibilidade */
+            border-radius: 10px;
+            font-size: 18px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .cta {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .cta button {
+            background-color: #ff00ee;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+        
+
+        .cta button {
+            background-color: #ff00ee;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            box-shadow: 0 0 10px rgba(255, 0, 238, 0.5), 0 0 20px rgba(255, 0, 238, 0.5);
+        }
+        
+        .cta button:hover {
+            background-color: #eb50e1;
+            box-shadow: 0 0 20px rgba(255, 0, 238, 0.7), 0 0 40px rgba(255, 0, 238, 0.7);
+        }
+
+        .benefits {
+            display: flex;
+            flex-direction: column;
+            margin: 20px 0;
+        }
+
+        .benefit-item {
+            background-color: #1abc9c; /* Verde */
+            color: #2c3e50;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .form {
+            background-color: #1abc9c;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .form label {
+            font-size: 16px;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form input[type="text"], .form input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .cta button:hover {
+            animation: pulse 0.5s infinite;
+        }
+        
+
+        .form input[type="submit"] {
+            background-color: #16a085;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            box-shadow: 0 0 10px rgba(0, 255, 208, 0.5), 0 0 20px rgba(0, 255, 208, 0.5);
+        }
+
+        .form input[type="submit"]:hover {
+            background-color: #10876f;
+        }
+        #message {
+            display: none; /* Inicialmente oculto */
+            color: #ffffff;
+            text-align: center; /* Centraliza o texto horizontalmente */
+            margin: 20px auto; /* Margem para espaçamento */
+            font-size: 18px;
+            box-shadow: 0 0 10px rgba(0, 255, 208, 0.5), 0 0 20px rgba(0, 255, 208, 0.5);
+            padding: 10px;
+            border-radius: 20px;
+            width: 200px;
+        }
+        
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #bdc3c7;
+        }
+
+        /* Estilos para o contador */
+        #countdown {
+            text-align: center;
+            font-size: 24px;
+            margin-top: 20px;
+            color: #ecf0f1;
+            animation: fadeIn 1s ease forwards;
+            opacity: 0;
+        }
+        .logos{
+            display: flex;
+            gap: 10px;
+        }
+
+        .avatar{
+            width: 700px;
+            border-radius: 10px;
+            margin: 5px;
+            
+        }
+
+        .logos :nth-child(2){
+            transition-delay: 1000ms;
+        }
+
+        .logos :nth-child(3){
+            transition-delay: 2000ms;
+        }
+
+        .logos :nth-child(4){
+            transition-delay: 3000ms;
+        }
+
+        /* RESPONSIVIDADE \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/*/
+
+        /* Para dispositivos pequenos como smartphones */
+@media (max-width: 767px) {
+    .container {
+        flex-direction: column; /* Elementos empilhados verticalmente em telas pequenas */
+    }
+
+    .item {
+        width: 100%; /* Ocupa a largura completa em telas pequenas */
+    }
+    #main-image{
+        background-image: url('img/fundo19.jpg');
+        background-size: cover; /* Cobrir toda a tela */
+        background-position: center; /* Centralizar a imagem */
+    }
+}
+
+/* Para tablets e dispositivos maiores */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .imgfundo{
+        content: url('img/fundo6.jpg');
+        background-size: cover; /* Cobrir toda a tela */
+        background-position: center; /* Centralizar a imagem */
+}
+    #content{
+        background-image: url('img/fundo18.jpg');
+        background-size: cover; /* Cobrir toda a tela */
+        background-position: center; /* Centralizar a imagem */
+    }
+    .container {
+        flex-direction: row; /* Elementos em linha em tablets */
+    }
+
+    .item {
+        flex: 1 1 45%; /* Cada item ocupa 45% do container, ajustável conforme necessário */
+    }
+}
+
+/* Para desktops */
+@media (min-width: 1025px) {
+    .imgfundo{
+        content: url('img/fundo6.jpg');
+        background-size: cover; /* Cobrir toda a tela */
+        background-position: center; /* Centralizar a imagem */
+}
+    #content{
+        background-image: url('img/fundo17.jpg');
+        background-size: cover; /* Cobrir toda a tela */
+        background-position: center; /* Centralizar a imagem */
+    }
+    .item {
+        flex: 1 1 30%; /* Itens ocupam cerca de 30% do container em desktops */
+    }
+}
+        img {
+            max-width: 100%; /* Faz a imagem se ajustar à largura do container */
+            height: auto; /* Mantém a proporção da imagem */
+        }
+        @media (max-width: 320px) {
+            /* Regras específicas para smartwatches */
+            body {
+                font-size: 12px; /* Texto menor para telas pequenas */
+                
+            }
+        }
+        input, textarea {
+            width: 100%; /* Faz os campos de formulário ocuparem toda a largura disponível */
+            padding: 10px;
+            box-sizing: border-box; /* Para garantir que o padding seja incluído nas dimensões */
+        }
+        
+
+        
+        
