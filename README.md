@@ -1,1 +1,14 @@
-# Landing-Page
+° Projeto(Project) Landing Page °
+
+#Assista o video e veja como ficou o projeto da Landing Page.
+#Watch the video and see how the Landing Page project turned out.
+
+#OBS: Desculpe pelo video de baixa qualidade. GitHub não permite videos com alta resolução. Minimo 10 MB.
+#NOTE: Sorry for the low quality video. GitHub does not allow high resolution videos. Minimum 10 MB.
+
+#Neste video mostro a interface para Desktops e mobile. Totalmente Responsivo.
+#In this video I show the interface for Desktops and mobile. Fully Responsive.
+
+https://github.com/user-attachments/assets/ee21fbdd-45b9-483d-947d-74ae8d966d1f
+
+
